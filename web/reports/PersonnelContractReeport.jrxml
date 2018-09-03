@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d012d524-d957-447f-81e7-2773b174f225">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="240"/>
+	<field name="empid" class="java.lang.String"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="dept" class="java.lang.String"/>
+	<field name="cadre" class="java.lang.String"/>
+	<field name="contractid" class="java.lang.String"/>
+	<field name="contractname" class="java.lang.String"/>
+	<field name="period" class="java.lang.String"/>
+	<field name="fullday" class="java.lang.String"/>
+	<field name="shortleave" class="java.lang.String"/>
+	<field name="date" class="java.lang.String"/>
+	<field name="basicsalary" class="java.lang.String"/>
+	<field name="allowancename" class="java.lang.String"/>
+	<field name="allowancedes" class="java.lang.String"/>
+	<field name="amount" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="121" splitType="Stretch">
+			<staticText>
+				<reportElement x="387" y="81" width="61" height="19" forecolor="#034DA2" uuid="fec37adc-dd2a-4682-bcb9-958c8e4775c9"/>
+				<textElement textAlignment="Center">
+					<font fontName="Microsoft PhagsPa" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Date:]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="448" y="80" width="100" height="20" forecolor="#034DA2" uuid="892d8f5e-ce5a-4a37-9b70-4b521757a216"/>
+				<textElement>
+					<font fontName="Microsoft PhagsPa"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="285" splitType="Stretch">
+			<staticText>
+				<reportElement x="42" y="72" width="90" height="20" uuid="e4532311-d955-4128-8481-d453414e27a3"/>
+				<textElement>
+					<font fontName="Microsoft PhagsPa" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Employee ID]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="135" y="72" width="90" height="20" uuid="e73928b2-36b2-4e1e-a209-cdb17c196726"/>
+				<textElement>
+					<font fontName="Microsoft PhagsPa" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{empid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="135" y="92" width="90" height="20" uuid="04aa47fa-f19d-445e-b17d-4a4ff2d34702"/>
+				<textElement>
+					<font fontName="Microsoft PhagsPa" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="342" y="71" width="90" height="20" uuid="16f9943b-9186-4f0c-b6f4-58158bc4ac60"/>
+				<textElement>
+					<font fontName="Microsoft PhagsPa" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Department]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="435" y="72" width="90" height="20" uuid="c239aad0-c5bf-4faf-84f3-a6c9d2335788"/>
+				<textElement>
+					<font fontName="Microsoft PhagsPa" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dept}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="42" y="92" width="90" height="20" uuid="57c9b5f0-8020-471d-8f5e-af9692b3161a"/>
+				<textElement>
+					<font fontName="Microsoft PhagsPa" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="342" y="92" width="90" height="20" uuid="f5a59980-64f4-45b4-8d78-45f6e3286e43"/>
+				<textElement>
+					<font fontName="Microsoft PhagsPa" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cadre]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="435" y="92" width="90" height="20" uuid="0da4e8a7-30b8-4be3-b52b-c842eb718f7d"/>
+				<textElement>
+					<font fontName="Microsoft PhagsPa" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cadre}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="45" y="152" width="90" height="20" uuid="ac1c29bd-19a7-4057-9a25-21ddf55814fb"/>
+				<textElement>
+					<font fontName="Microsoft PhagsPa" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contract ID]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="138" y="152" width="90" height="20" uuid="c4052326-a01c-4d97-8cfb-3bcf54144f96"/>
+				<textElement>
+					<font fontName="Microsoft PhagsPa" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{contractid}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="45" y="172" width="90" height="20" uuid="4fdf3a0a-9fed-4a6b-9941-aae99b2c3074"/>
+				<textElement>
+					<font fontName="Microsoft PhagsPa" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contract Name]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="138" y="172" width="90" height="20" uuid="cf939b29-c624-470f-a156-c59c43898eaf"/>
+				<textElement>
+					<font fontName="Microsoft PhagsPa" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{contractname}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="45" y="192" width="90" height="20" uuid="eed2e7c0-14f3-4129-96c9-ad9ecf613c8d"/>
+				<textElement>
+					<font fontName="Microsoft PhagsPa" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Period]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="138" y="192" width="90" height="20" uuid="9c11b845-b430-483e-a131-eb124f79b4c6"/>
+				<textElement>
+					<font fontName="Microsoft PhagsPa" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{period}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="342" y="152" width="90" height="20" uuid="d43b8d80-7f36-490b-aebe-830cc393584d"/>
+				<textElement>
+					<font fontName="Microsoft PhagsPa" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Full Day Leave]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="435" y="152" width="90" height="20" uuid="1f68bf5b-10e6-4ecf-bacf-6613c13acf3f"/>
+				<textElement>
+					<font fontName="Microsoft PhagsPa" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fullday}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="342" y="172" width="90" height="20" uuid="190e4a1b-6eb7-4ef6-8615-a6b7a3216c17"/>
+				<textElement>
+					<font fontName="Microsoft PhagsPa" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Short Leave]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="435" y="172" width="90" height="20" uuid="fdf82640-a531-46b7-9a4e-40187c344d7f"/>
+				<textElement>
+					<font fontName="Microsoft PhagsPa" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{shortleave}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="342" y="192" width="90" height="20" uuid="2ba9d8fa-1528-48d7-a6ad-bb0733332c0f"/>
+				<textElement>
+					<font fontName="Microsoft PhagsPa" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date of Contract]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="435" y="192" width="90" height="20" uuid="79d6cfab-d2f5-4118-97f6-f58e7d965182"/>
+				<textElement>
+					<font fontName="Microsoft PhagsPa" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="42" y="241" width="90" height="20" uuid="ec3e91c9-181d-496e-9a24-ce880e7437c1"/>
+				<textElement>
+					<font fontName="Microsoft PhagsPa" size="12"/>
+				</textElement>
+				<text><![CDATA[Basic Salary]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="135" y="241" width="90" height="20" uuid="6992f5c5-12eb-4285-92d4-3ce3f2da54b8"/>
+				<textElement>
+					<font fontName="Microsoft PhagsPa" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{basicsalary}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="194" y="0" width="210" height="31" forecolor="#034DA2" uuid="006b80a0-e219-4397-bcfa-8bba6caf3bd5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Microsoft PhagsPa" size="18" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Personnel Report]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="194" y="19" width="210" height="31" forecolor="#034DA2" uuid="f820f59b-3a1c-4b8a-a17a-cb31891c72ed"/>
+				<textElement textAlignment="Center">
+					<font fontName="Microsoft PhagsPa" size="18" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Contract Details ]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="110" height="20" uuid="f7122908-2ee2-4bc6-824c-f04baf7b5f14"/>
+				<textElement>
+					<font fontName="Microsoft PhagsPa" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Allowance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="0" width="294" height="20" uuid="c890cd43-245c-4279-b557-2870d5cae748"/>
+				<textElement>
+					<font fontName="Microsoft PhagsPa" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="404" y="0" width="151" height="20" uuid="8ad68c8d-313b-46c6-ac3f-4b9995d4998a"/>
+				<textElement>
+					<font fontName="Microsoft PhagsPa" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="110" height="20" uuid="865ca55a-4110-4b0c-a0c9-6231f5c644fe"/>
+				<textElement>
+					<font fontName="Microsoft PhagsPa" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{allowancename}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="0" width="294" height="20" uuid="c53b48b5-fa58-4882-aaaf-2df73c0364ba"/>
+				<textElement>
+					<font fontName="Microsoft PhagsPa" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{allowancedes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="404" y="0" width="151" height="20" uuid="1ec1c31b-74f3-426c-97be-2c2631d200c1"/>
+				<textElement>
+					<font fontName="Microsoft PhagsPa" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

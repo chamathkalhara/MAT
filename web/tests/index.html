@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Unit tests</title>
+  <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.0.1.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://code.jquery.com/qunit/qunit-2.0.1.js"></script>
+  <script type="text/javascript" src="../js/validation.js"></script>
+
+  <script>
+    console.log("let's test this", formatDate);
+    QUnit.test("format Date", function( assert ) {
+      var now = new Date(2016, 08, 24);
+      assert.equal(formatDate(now), "2016-09-24");
+      var now = new Date(2016, 09, 2);
+      assert.equal(formatDate(now), "2016-10-02");
+      var now = new Date(2016, 08, 24);
+      assert.equal(formatDate(now), "2016-09-24");
+      var now = new Date(2012, 01, 01);
+      assert.equal(formatDate(now), "2012-02-01");
+      var now = new Date(2016, 10, 09);
+      assert.equal(formatDate(now), "2016-11-09");
+    });
+  </script>
+</head>
+<body>
+  <div id="qunit"></div>
+
+</body>
+</html>

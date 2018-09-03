@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="26ca46c8-ce77-4477-b2d2-f7f4fec84f53">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Crosstab Data Text" hAlign="Center"/>
+	<field name="empId" class="java.lang.String"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="department" class="java.lang.String"/>
+	<field name="cadre" class="java.lang.String"/>
+	<field name="salary" class="java.lang.Double"/>
+	<field name="travelling" class="java.lang.String"/>
+	<field name="mobile" class="java.lang.String"/>
+	<field name="vehicle" class="java.lang.String"/>
+	<field name="fuel" class="java.lang.String"/>
+	<field name="meal" class="java.lang.String"/>
+	<field name="total" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="153" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="19" y="0" width="50" height="20" uuid="68a4507f-d67e-498e-8f1e-3f75f260201f"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="69" y="0" width="50" height="20" uuid="6e17280f-bf8d-4f0e-b789-97fd446f4136"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="119" y="0" width="50" height="20" uuid="18d0eaa8-0c1c-4577-8666-b85de7f25459"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[Department]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="169" y="0" width="50" height="20" uuid="ea0d03b5-3e13-48ae-ab20-218f4ec2bdd6"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[Cadre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="219" y="0" width="50" height="20" uuid="7036f47e-ad19-4aaa-a775-33394113ba81"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[Salary]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="269" y="0" width="50" height="20" uuid="39da89fa-c809-40d9-bdfe-35e614e32837"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[Travelling]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="319" y="0" width="50" height="20" uuid="0a5dbf53-3d5c-491d-a711-f33bcbd5c07a"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[Mobile]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="369" y="0" width="50" height="20" uuid="4abaabb6-aadc-4f17-8600-5b913b2b97a6"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[Fuel]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="419" y="0" width="50" height="20" uuid="8e32e727-e83b-416d-9db1-484c0a6bfc2c"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[Vehicle]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="469" y="0" width="50" height="20" uuid="c8d7bbc1-f100-401e-8742-a28024b9726e"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[Meal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="519" y="0" width="50" height="20" uuid="ee52876e-2bcf-44a1-b517-10a717f137d7"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<line>
+				<reportElement x="19" y="30" width="555" height="1" uuid="89e95604-c7ff-43f4-9418-677a50982c93"/>
+			</line>
+			<line>
+				<reportElement x="19" y="0" width="555" height="1" uuid="f8bbff70-3a29-48d0-8d54-a8fbcdbd9a49"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="54" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="19" y="0" width="50" height="54" uuid="ca6bf0f5-c2da-4ae7-90d3-89a58bfbe235"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{empId}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="69" y="0" width="50" height="54" uuid="7dcfeee6-2ebb-4a20-9106-91a9c10498eb"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="169" y="0" width="50" height="54" uuid="c9ad9e97-8d04-4ab9-bfdd-b909685304f0"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cadre}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement mode="Opaque" x="219" y="0" width="50" height="54" uuid="a548e077-3d42-48a8-8f05-7ab1f1ee4ee9"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{salary}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="269" y="0" width="50" height="54" uuid="48165486-61f2-497b-9144-3d4d798bfd54"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{travelling}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="319" y="0" width="50" height="54" uuid="cdbdbde0-8284-416e-b468-01e8ed80faf3"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mobile}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="369" y="0" width="50" height="54" uuid="2dfa51a0-3a12-4db2-ad87-4439694f43e9"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fuel}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="419" y="0" width="50" height="54" uuid="8b7e4f6d-9ffc-4626-ac57-28bf7e2f33b4"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vehicle}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="469" y="0" width="50" height="54" uuid="3b57f8f0-833f-47c1-8c08-e55032f9ccb0"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{meal}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="519" y="0" width="50" height="54" uuid="2b005d93-b3d1-4bb1-af3e-217f09b663d7"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="120" y="0" width="50" height="54" uuid="02699781-43cf-4a2b-8917-b607bb19b245"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{department}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

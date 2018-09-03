@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a32f0ae0-3822-4a6c-9d62-8d9251f245bd">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="empid" class="java.lang.String"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="basicsalary" class="java.lang.String"/>
+	<field name="allowancename" class="java.lang.String"/>
+	<field name="allowancedes" class="java.lang.String"/>
+	<field name="amount" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="159" splitType="Stretch">
+			<textField>
+				<reportElement x="92" y="20" width="92" height="20" uuid="915c664d-f4da-4e33-8a32-ddec7a0dd004"/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="20" width="92" height="20" uuid="de51e86b-aebf-4c69-9a2e-3b433d1b56c5"/>
+				<text><![CDATA[name]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="92" y="0" width="92" height="20" uuid="308dd818-c826-402f-bf71-55dfc70db4c8"/>
+				<textFieldExpression><![CDATA[$F{empid}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="92" height="20" uuid="60b2fd4f-adb4-4c73-b3b9-2c1abdae0b45"/>
+				<text><![CDATA[empid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="40" width="92" height="20" uuid="fdbfecad-1d19-468f-b5e7-6a7891f58235"/>
+				<text><![CDATA[basicsalary]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="92" y="40" width="92" height="20" uuid="c36a921a-dc9a-4856-b15f-78b70884601a"/>
+				<textFieldExpression><![CDATA[$F{basicsalary}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="92" height="20" uuid="7d3094d2-e8b2-46a9-b291-ee60d95bc6fb"/>
+				<text><![CDATA[allowancename]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="0" width="309" height="20" uuid="3c55cc2f-c445-4309-8867-516fbb6eaf7d"/>
+				<text><![CDATA[allowancedes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="401" y="0" width="92" height="20" uuid="dbd3b063-c971-4e32-966b-17d3b068d691"/>
+				<text><![CDATA[amount]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="1" width="92" height="20" uuid="18b44831-eccb-41cd-bb95-31c7d433f001"/>
+				<textFieldExpression><![CDATA[$F{allowancename}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="92" y="1" width="309" height="20" uuid="1afb4514-5043-4541-9e3b-7b39374381fa"/>
+				<textFieldExpression><![CDATA[$F{allowancedes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="401" y="1" width="92" height="20" uuid="1a9224c1-c5f3-448f-b42e-8548dac9437a"/>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<textField>
+				<reportElement x="383" y="22" width="100" height="20" uuid="a361a3de-3cad-47ae-a1f0-d9ffbdcdfd44"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
