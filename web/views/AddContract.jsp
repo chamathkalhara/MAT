@@ -1,8 +1,4 @@
-<%-- 
-    Document   : AddContract
-    Created on : Sep 3, 2016, 10:23:13 PM
-    Author     : tulip
---%>
+
 
 <%@page import="dto.AllowanceDTO"%>
 <%@page import="java.util.ArrayList"%>

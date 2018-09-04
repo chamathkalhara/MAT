@@ -1,8 +1,4 @@
-<%-- 
-    Document   : AddAllowanceNew
-    Created on : Jan 12, 2017, 9:28:56 AM
-    Author     : tajini94
---%>
+
 
 <%@page import="service.AllowanceService"%>
 <%@page import="dto.AllowanceDTO"%>

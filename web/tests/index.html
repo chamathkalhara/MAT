@@ -11,15 +11,15 @@
     console.log("let's test this", formatDate);
     QUnit.test("format Date", function( assert ) {
       var now = new Date(2016, 08, 24);
-      assert.equal(formatDate(now), "2016-09-24");
-      var now = new Date(2016, 09, 2);
-      assert.equal(formatDate(now), "2016-10-02");
+      assert.equal(formatDate(now), "2018-09-24");
+      var now = new Date(2016, 09, 2)
+      assert.equal(formatDate(now), "2018-10-02");
       var now = new Date(2016, 08, 24);
-      assert.equal(formatDate(now), "2016-09-24");
+      assert.equal(formatDate(now), "2018-09-24");
       var now = new Date(2012, 01, 01);
-      assert.equal(formatDate(now), "2012-02-01");
+      assert.equal(formatDate(now), "2018-02-01");
       var now = new Date(2016, 10, 09);
-      assert.equal(formatDate(now), "2016-11-09");
+      assert.equal(formatDate(now), "2018-11-09");
     });
   </script>
 </head>

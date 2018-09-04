@@ -1,5 +1,5 @@
 <%-- 
-    This form is used to add new employees and players.
+    This form is used to add new employees.
 --%>
 
 <%@page import="dto.ContractDTO"%>
@@ -7,9 +7,7 @@
 <%@page import="java.util.Collections"%>
 <%@page import="dto.EmployeeDTO"%>
 <%@page import="connection.DBConnection"%>
-<%@page import="service.DepartmentService"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="service.CadreService"%>
 <%@page import="service.EmployeeService"%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.Connection"%>
@@ -75,44 +73,7 @@
                         }
                     });
                 });
-                $('#form2').on('submit', function (e) {
-
-                    e.preventDefault();
-                    e.stopImmediatePropagation();
-                    $.ajax({
-                        type: "POST",
-                        url: "../EmployeeController",
-                        data: {eno: $("#eno").val(), fname: $("#fname").val(), lname: $("#lname").val(), gender: $("#gender").val(), nic: $("#nic").val(), dob: $("#dob").val(), address: $("#address").val(), epfno: $("#epfno").val(), photo: $("#image_upload").val(), ppno: $("#ppno").val(), email: $("#email").val(), phone: $("#contactno").val(), role: $("#role").val(), keeper: $("#keeper").val(), national: $("#national").val(), cricid: $("#cricid").val(), type: "add2"},
-                        success: function (result) {
-                            if (result === 'true') {
-                                $('#peid').val($("#eno").val());
-                                $('#myModal3').css('display', 'none');
-                                $('#myModal').css('display', 'block');
-
-                            } else {
-                                alert("added failed ");
-                            }
-
-                        }
-                    });
-                });
-
-                $('#cid').on('change', function (e) {
-
-                    e.preventDefault();
-                    e.stopImmediatePropagation();
-
-                    if (this.value === 'Player') {
-
-                        if ($('form')[0].checkValidity()) {
-                            $('#myModal3').css('display', 'block');
-                        } else {
-                            alert("Complete personal details");
-                        }
-
-                    }
-
-                });
+                
 
                 $('.close').click(function () {
                     $('#myModal').css('display', 'none');
@@ -388,79 +349,5 @@
             </div>
         </div>
 
-        <div id="myModal3" class="modal">
-            <div class="modal-content model_int">
-                <span class="close">×</span>
-                <div class="modal-header">
-                        <h2><center><strong>Add Player Details</strong></center></h2></div><br>
-                <form id="form2" onsubmit="return false">
-                    <div class="grid_container">
-                        <div class="row">
-                            <div class="column_four">
-                                <div class="row">
-                                    <div class="column_two label_input">
-                                        <label for="did">Player Role<span class="asterix">*</span> </label>
-                                    </div>
-                                    <div class="column_four ">
-                                        <select style="width: 280px" id="role" name="role" required>
-                                            <option selected="">Please Select</option>
-                                            <option>Batsman</option>
-                                            <option>Bowler</option>
-                                            <option>All Rounder</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="column_two label_input">
-                                        <label for="wkeeper">Wicket Keeper <span class="asterix">*</span> </label>
-                                    </div>
-                                    <div class="column_four adjust">
-                                        <input type="radio" name="wkeeper" id="keeper" value="yes"  checked> Yes
-                                        <input type="radio" name="wkeeper" id="keeper" value="no"> No
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="column_two label_input">
-                                        <label for="national">National <span class="asterix">*</span> </label>
-                                    </div>
-                                    <div class="column_four adjust">
-                                        <select id="national">
-                                            <option>National</option>
-                                            <option>First class</option>
-                                            <option>List A</option>
-                                            <option>U19</option>
-                                        </select>
-
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="column_three label_input">
-                                        <label for="cid">Cric ID<span class="asterix">*</span></label>
-                                    </div>
-                                    <div class="column_four">
-                                        <input type="text" name="cricid" required id="cricid" maxlength="8" minlength="4" pattern="[0-9]+" placeholder="Enter Cric ID here">
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-                        <center><input type="submit" value="Add Player" id="paddcontract"></center>
-                    </div>
-                </form>
-                <div id="dialog-message" title="Download complete">
-                    <p>
-                        <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
-                        Your files have downloaded successfully into the My Downloads folder.
-                    </p>
-                    <p>
-                        Currently using <b>36% of your storage space</b>.
-                    </p>
-                </div>
-            </div>
-        </div>
     </body>
 </html>

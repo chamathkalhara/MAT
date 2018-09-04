@@ -6,7 +6,7 @@ function changeEmpValue() {
     document.getElementById("updatebtn_emp").style.visibility = "hidden";
     document.getElementById("ub").style.visibility = "visible";
     document.getElementById("de").style.visibility = "hidden";
-    var elems = ["fname" , "lname" , "gender" , "nic" , "dob" , "address" , "epfno" , "ppno" , "did" , "cid"];
+    var elems = ["fname" , "lname" , "gender" , "nic" , "dob" , "address" , "epfno" , "ppno"];
     for (var i = elems.length - 1; i >= 0; i--) {
         document.getElementsByName(elems[i])[0].disabled = false;
     }
